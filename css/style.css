@@ -129,7 +129,7 @@ h2 {
   line-height: 1.35;
 }
 
-h2:focus, h1:focus { outline: none; }
+h1:focus, h2:focus, h3:focus { outline: none; }
 
 .opcoes { display: grid; gap: .75rem; text-align: left; }
 

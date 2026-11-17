@@ -4,8 +4,13 @@
 
 (() => {
   const $ = (id) => document.getElementById(id);
-  const semAnimacao = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const esperar = (ms) => new Promise((r) => setTimeout(r, semAnimacao ? 0 : ms));
+  const movimento = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const semAnimacao = () => movimento.matches;
+  const esperar = (ms) => new Promise((r) => setTimeout(r, semAnimacao() ? 0 : ms));
+  const json = (url) => fetch(url).then((r) => {
+    if (!r.ok) throw new Error(`${url}: ${r.status}`);
+    return r.json();
+  });
 
   let perguntas = null;
   let frases = null;
@@ -24,8 +29,8 @@
   async function carregar() {
     try {
       const [q, f] = await Promise.all([
-        fetch("data/questions.json").then((r) => r.json()),
-        fetch("data/phrases.json").then((r) => r.json()),
+        json("data/questions.json"),
+        json("data/phrases.json"),
       ]);
       perguntas = q;
       frases = f;
@@ -64,7 +69,9 @@
       b.type = "button";
       b.className = "opcao";
       b.textContent = o.texto;
-      if (respostas[atual] === i) b.classList.add("escolhida");
+      const escolhida = respostas[atual] === i;
+      b.classList.toggle("escolhida", escolhida);
+      b.setAttribute("aria-pressed", String(escolhida));
       b.addEventListener("click", () => responder(i));
       caixa.append(b);
     });
@@ -168,7 +175,10 @@
     $("leitura").classList.toggle("revelada", abrir);
     $("btn-truque").setAttribute("aria-expanded", String(abrir));
     $("btn-truque").textContent = abrir ? "Esconder o truque" : "Como o truque funciona?";
-    if (abrir) $("truque").scrollIntoView({ behavior: semAnimacao ? "auto" : "smooth", block: "start" });
+    if (abrir) {
+      $("truque").scrollIntoView({ behavior: semAnimacao() ? "auto" : "smooth", block: "start" });
+      $("titulo-truque").focus({ preventScroll: true });
+    }
   }
 
   function jogarDeNovo() {
