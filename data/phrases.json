@@ -1,4 +1,163 @@
 {
-  "_nota": "Fase 1: banco de frases por traço. Escrever depois de aprovar questions.json.",
-  "tracos": {}
+  "_nota": "RASCUNHO (Fase 1). Toda frase leva 'tecnica', que a tela 'Como o truque funciona?' usa para revelar o truque frase a frase. Os porquês são sempre palpites. Escolha determinística: as mesmas respostas geram a mesma leitura.",
+
+  "tecnicas": {
+    "pista": {
+      "nome": "Devolver a pista",
+      "explicacao": "Eu repeti uma resposta que você mesmo deu e chamei isso de dedução. Não adivinhei nada: só li o que você escreveu."
+    },
+    "traco": {
+      "nome": "Leitura pelas respostas",
+      "explicacao": "Suas respostas somaram pontos a um perfil, e eu escolhi uma frase pronta desse perfil. É uma tabela, não um sexto sentido."
+    },
+    "palpite": {
+      "nome": "Palpite confiante",
+      "explicacao": "Um 'porquê' dito com segurança soa como conhecimento. Ninguém pode provar que está errado, e por isso ele parece certo."
+    },
+    "arco_iris": {
+      "nome": "Afirmação arco-íris",
+      "explicacao": "A frase diz uma coisa e o contrário ('sociável, mas às vezes quer silêncio'). Qualquer pessoa se reconhece em pelo menos uma das metades."
+    },
+    "forer": {
+      "nome": "Efeito Forer",
+      "explicacao": "Uma frase que serve para quase todo mundo. Em 1948, o psicólogo Bertram Forer deu o mesmo 'perfil personalizado' a todos os alunos, e eles deram nota média 4,3 de 5 para a precisão."
+    },
+    "elogio": {
+      "nome": "Elogio disfarçado",
+      "explicacao": "Gostamos de acreditar em frases que nos elogiam. Um elogio no meio da leitura deixa o resto mais convincente."
+    },
+    "teatro": {
+      "nome": "Teatro",
+      "explicacao": "Pausas, suspense e confiança. Não dizem nada sobre você, mas fazem o resto parecer mais impressionante."
+    }
+  },
+
+  "abertura": [
+    { "texto": "Muito bem. Deixe-me olhar para você com calma.", "tecnica": "teatro" },
+    { "texto": "Interessante. Você respondeu mais do que imagina.", "tecnica": "teatro" },
+    { "texto": "Catorze respostas. Para mim, é quase uma biografia.", "tecnica": "teatro" }
+  ],
+
+  "interjeicoes": {
+    "q04": { "texto": "Hm. Já estou vendo um padrão.", "tecnica": "teatro" },
+    "q08": { "texto": "Essa eu já sabia. Continue.", "tecnica": "teatro" },
+    "q12": { "texto": "Quase lá. Não mude de ideia agora.", "tecnica": "teatro" }
+  },
+
+  "pistas": [
+    "Você respondeu: “{resposta}” Parece um detalhe. Não é.",
+    "Lembra quando escolheu “{resposta}”? Eu reparei.",
+    "“{resposta}” Foi aí que eu entendi."
+  ],
+
+  "tracos": {
+    "controlador": {
+      "mania": [
+        { "texto": "Você tem um jeito certo de fazer as coisas, e sofre um pouquinho vendo alguém fazer do jeito errado.", "tecnica": "traco" },
+        { "texto": "Você arruma de novo a louça que alguém já tinha arrumado.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite? Para você, um plano é uma forma de descanso: o que já está decidido não precisa mais ser pensado.", "tecnica": "palpite" },
+        { "texto": "Arrisco dizer que, quando tudo está no lugar, sobra espaço na sua cabeça para o que importa.", "tecnica": "palpite" }
+      ]
+    },
+    "procrastinador": {
+      "mania": [
+        { "texto": "Você tem uma lista de coisas para fazer e outra, invisível, de coisas que fez para fugir da primeira.", "tecnica": "traco" },
+        { "texto": "Antes de uma tarefa chata, você arruma a mesa inteira. Às vezes, o quarto inteiro.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite: o prazo apertado é o único despertador sem soneca, e você sabe disso.", "tecnica": "palpite" },
+        { "texto": "Arrisco que não é preguiça: você só rende quando a tarefa fica interessante, e nada é mais interessante do que o risco de não dar tempo.", "tecnica": "palpite" }
+      ]
+    },
+    "observador": {
+      "mania": [
+        { "texto": "Você repara no corte de cabelo novo que a pessoa nem comentou.", "tecnica": "traco" },
+        { "texto": "Num restaurante, você prefere a cadeira de onde dá para ver a porta.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite é que você gosta de entender o lugar antes de entrar nele. Quem observa primeiro raramente leva susto.", "tecnica": "palpite" },
+        { "texto": "Arrisco que você descobriu cedo que dá para saber muito sobre alguém sem perguntar nada.", "tecnica": "palpite" }
+      ]
+    },
+    "acelerado": {
+      "mania": [
+        { "texto": "Você termina as frases dos outros na cabeça. Às vezes, em voz alta.", "tecnica": "traco" },
+        { "texto": "Você aperta o botão do elevador mais de uma vez, como se isso ajudasse.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite: para você, esperar é a parte mais cansativa de qualquer coisa.", "tecnica": "palpite" },
+        { "texto": "Arrisco que sua cabeça já está na próxima tarefa antes de você terminar esta, e isso dá certo mais vezes do que deveria.", "tecnica": "palpite" }
+      ]
+    },
+    "sociavel": {
+      "mania": [
+        { "texto": "Você puxa conversa na fila e sai sabendo até o nome do cachorro da pessoa.", "tecnica": "traco" },
+        { "texto": "É você quem cria o grupo da viagem. E quem lembra todo mundo de que a viagem existe.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite é que, para você, uma coisa só aconteceu de verdade depois de ser contada para alguém.", "tecnica": "palpite" },
+        { "texto": "Arrisco que você recarrega as energias perto das pessoas, enquanto muita gente gasta as dela.", "tecnica": "palpite" }
+      ]
+    },
+    "cauteloso": {
+      "mania": [
+        { "texto": "Você lê as letras miúdas e o manual, mesmo quando ninguém lê.", "tecnica": "traco" },
+        { "texto": "Você sai de casa com folga de horário, só por garantia.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite: você adora surpresas, desde que tenham sido avisadas com antecedência.", "tecnica": "palpite" },
+        { "texto": "Arrisco que você já imaginou três jeitos de algo dar errado. Por isso quase nunca dá.", "tecnica": "palpite" }
+      ]
+    },
+    "sonhador": {
+      "mania": [
+        { "texto": "Você ensaia conversas que talvez nunca aconteçam, e ganha todas.", "tecnica": "traco" },
+        { "texto": "Você pesquisa uma coisa e, duas horas depois, está lendo sobre outra completamente diferente.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite é que a sua cabeça é um lugar interessante demais para ficar só no aqui e agora.", "tecnica": "palpite" },
+        { "texto": "Arrisco que você tem mais ideias do que tempo, e escolhe quais seguir pelo brilho, não pela lógica.", "tecnica": "palpite" }
+      ]
+    },
+    "pratico": {
+      "mania": [
+        { "texto": "Você resolve o problema enquanto os outros ainda discutem de quem é a culpa.", "tecnica": "traco" },
+        { "texto": "Você tem um pedido “de sempre” em pelo menos três lugares.", "tecnica": "traco" }
+      ],
+      "palpite": [
+        { "texto": "Meu palpite: você aprendeu que a maioria das decisões não merece mais de dez segundos, e guarda energia para as que merecem.", "tecnica": "palpite" },
+        { "texto": "Arrisco que, para você, a melhor solução é a que funciona hoje, não a perfeita na semana que vem.", "tecnica": "palpite" }
+      ]
+    }
+  },
+
+  "combos": [
+    { "tracos": ["controlador", "procrastinador"], "texto": "Você planeja tudo com perfeição e depois deixa o plano para amanhã. Para você, planejar é a parte divertida.", "tecnica": "arco_iris" },
+    { "tracos": ["observador", "cauteloso"], "texto": "Você sabe mais do que diz. Prefere esperar o momento certo, e quase sempre ele chega.", "tecnica": "elogio" },
+    { "tracos": ["sociavel", "acelerado"], "texto": "Você chega aos lugares como quem já está atrasado para a próxima conversa.", "tecnica": "traco" },
+    { "tracos": ["sonhador", "procrastinador"], "texto": "Você tem um projeto guardado há tempo, e ele fica mais bonito a cada vez que você não começa.", "tecnica": "forer" },
+    { "tracos": ["controlador", "cauteloso"], "texto": "Você tem um plano B. E, desconfio, um plano C que ninguém conhece.", "tecnica": "traco" },
+    { "tracos": ["sociavel", "observador"], "texto": "Você conversa com todo mundo, mas presta mais atenção do que fala. As pessoas não percebem.", "tecnica": "arco_iris" },
+    { "tracos": ["pratico", "acelerado"], "texto": "Você já resolveu isso. Está só esperando os outros perceberem.", "tecnica": "elogio" },
+    { "tracos": ["sonhador", "observador"], "texto": "Você repara nos detalhes e depois inventa a história inteira por trás deles.", "tecnica": "traco" },
+    { "tracos": ["controlador", "acelerado"], "texto": "Você faz do seu jeito porque é mais rápido do que explicar como quer.", "tecnica": "traco" },
+    { "tracos": ["pratico", "cauteloso"], "texto": "Você não se arrisca à toa, mas, quando decide, não olha para trás.", "tecnica": "arco_iris" }
+  ],
+
+  "universais": [
+    { "texto": "Você consegue ser ótima companhia, mas há dias em que tudo o que quer é silêncio.", "tecnica": "arco_iris" },
+    { "texto": "Por fora você parece em paz, mas por dentro a cabeça raramente desliga.", "tecnica": "arco_iris" },
+    { "texto": "Você tem um senso de humor que nem todo mundo entende de primeira.", "tecnica": "elogio" },
+    { "texto": "Você cobra mais de si do que dos outros.", "tecnica": "forer" },
+    { "texto": "Tem uma ideia sua guardada que você ainda não contou para quase ninguém.", "tecnica": "forer" },
+    { "texto": "Tem alguma coisa na sua casa que está quebrada há tempo, e você já se acostumou com ela.", "tecnica": "forer" }
+  ],
+
+  "finais": [
+    { "texto": "Eu não leio mentes. Leio pessoas. E você é um livro aberto.", "tecnica": "teatro" },
+    { "texto": "Tudo isso a partir de catorze respostas. Imagine se eu tivesse visto você entrar.", "tecnica": "teatro" },
+    { "texto": "Não precisa dizer se eu acertei. Eu já sei.", "tecnica": "teatro" }
+  ]
 }

@@ -27,7 +27,7 @@
         { "texto": "Levanto na hora. O dia já tem roteiro.", "tracos": { "controlador": 2, "pratico": 1 } },
         { "texto": "Soneca. Depois outra. Depois mais uma.", "tracos": { "procrastinador": 2, "sonhador": 1 } },
         { "texto": "Pego o celular e vejo tudo o que aconteceu enquanto eu dormia.", "tracos": { "acelerado": 2, "sociavel": 1 } },
-        { "texto": "Fico deitado pensando no dia, ou em qualquer outra coisa.", "tracos": { "sonhador": 2, "observador": 1 } }
+        { "texto": "Fico na cama pensando no dia, ou em qualquer outra coisa.", "tracos": { "sonhador": 2, "observador": 1 } }
       ]
     },
     {
@@ -35,7 +35,7 @@
       "texto": "Um domingo inteiro sem compromisso. Como ele costuma terminar?",
       "opcoes": [
         { "texto": "Com a semana seguinte toda organizada.", "tracos": { "controlador": 2, "cauteloso": 1 } },
-        { "texto": "Cansado: fiz mil coisas e não parei.", "tracos": { "acelerado": 2, "pratico": 1 } },
+        { "texto": "Na correria: fiz mil coisas e não parei.", "tracos": { "acelerado": 2, "pratico": 1 } },
         { "texto": "Sem ter feito nada do que planejei. E foi ótimo.", "tracos": { "procrastinador": 2, "sonhador": 1 } },
         { "texto": "Com gente em volta, de preferência com comida.", "tracos": { "sociavel": 2 } }
       ]
@@ -85,7 +85,7 @@
       "texto": "Alguém fura a fila na sua frente. O que você sente na hora?",
       "opcoes": [
         { "texto": "Vontade de falar, e falo: educado, mas firme.", "tracos": { "controlador": 2 } },
-        { "texto": "Fico quieto, mas ensaio a resposta perfeita pelo resto do dia.", "tracos": { "sonhador": 2, "cauteloso": 1 } },
+        { "texto": "Não digo nada, mas ensaio a resposta perfeita pelo resto do dia.", "tracos": { "sonhador": 2, "cauteloso": 1 } },
         { "texto": "Curiosidade: olho em volta para ver se mais alguém percebeu.", "tracos": { "observador": 2 } },
         { "texto": "Preguiça de brigar. Não vale a energia.", "tracos": { "pratico": 2 } }
       ]
