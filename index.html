@@ -14,7 +14,7 @@
     <!-- Tela 1: Início -->
     <section id="tela-inicio" class="tela" aria-labelledby="titulo-inicio">
       <p class="sobretitulo">Um jogo de leitura fria</p>
-      <h1 id="titulo-inicio">The Mentalist</h1>
+      <h1 id="titulo-inicio" tabindex="-1">The Mentalist</h1>
       <p class="aviso" role="note">
         Isto é um jogo de entretenimento inspirado em mentalismo de ficção.
         Não é avaliação psicológica, diagnóstico nem conselho.
@@ -23,15 +23,48 @@
         Responda 14 perguntas rápidas sobre o seu dia a dia.
         Eu vou adivinhar três manias suas. Talvez eu acerte. Talvez seja só um truque.
       </p>
-      <button id="btn-comecar" class="botao" type="button" disabled>Em construção</button>
+      <button id="btn-comecar" class="botao" type="button" disabled>Carregando…</button>
+      <p id="erro-carga" class="erro" role="alert" hidden></p>
       <p class="rodape">Nada do que você responde sai deste navegador.</p>
     </section>
 
-    <!-- Tela 2: Questionário (Fase 3) -->
-    <section id="tela-perguntas" class="tela" hidden></section>
+    <!-- Tela 2: Questionário -->
+    <section id="tela-perguntas" class="tela" aria-labelledby="pergunta-texto" hidden>
+      <div class="progresso">
+        <span id="progresso-texto">Pergunta 1 de 14</span>
+        <div class="barra" aria-hidden="true"><div id="progresso-barra"></div></div>
+      </div>
+      <p id="interjeicao" class="interjeicao" aria-live="polite"></p>
+      <p id="pergunta-area" class="sobretitulo"></p>
+      <h2 id="pergunta-texto" tabindex="-1"></h2>
+      <div id="opcoes" class="opcoes" role="group" aria-labelledby="pergunta-texto"></div>
+      <button id="btn-voltar" class="link" type="button">← Voltar</button>
+    </section>
 
-    <!-- Tela 3: Leitura (Fase 3) -->
-    <section id="tela-leitura" class="tela" hidden></section>
+    <!-- Tela 3: Leitura -->
+    <section id="tela-leitura" class="tela" aria-labelledby="titulo-leitura" hidden>
+      <p class="aviso" role="note">
+        Isto é um jogo de entretenimento inspirado em mentalismo de ficção.
+        Não é avaliação psicológica, diagnóstico nem conselho.
+      </p>
+      <h2 id="titulo-leitura" tabindex="-1">A leitura</h2>
+      <p id="pensando" class="pensando" aria-live="polite"></p>
+      <div id="leitura" class="leitura"></div>
+      <div id="acoes" class="acoes" hidden>
+        <button id="btn-truque" class="botao" type="button" aria-expanded="false" aria-controls="truque">Como o truque funciona?</button>
+        <button id="btn-novo" class="botao botao-secundario" type="button">Jogar de novo</button>
+      </div>
+      <div id="truque" class="truque" hidden>
+        <h3>O truque</h3>
+        <p>
+          Eu não li a sua mente. Cada frase acima saiu de uma tabela, escolhida pelas suas respostas,
+          e usou uma técnica de <strong>leitura fria</strong>, o método de mentalistas e videntes para
+          parecerem certeiros. Agora cada frase mostra a técnica que usou.
+        </p>
+        <dl id="truque-tecnicas"></dl>
+        <p class="rodape">Quer se aprofundar? Procure por "leitura fria" e "efeito Forer".</p>
+      </div>
+    </section>
 
   </main>
   <script src="js/engine.js"></script>

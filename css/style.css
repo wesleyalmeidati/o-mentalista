@@ -99,10 +99,149 @@ h1 {
   font-size: .8rem;
 }
 
+/* ---------- avisos e erros ---------- */
+.erro { color: #e8a49a; font-size: .9rem; }
+
+/* ---------- questionário ---------- */
+.progresso {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  color: var(--texto-suave);
+  font-size: .8rem;
+  letter-spacing: .08em;
+}
+
+.barra { height: 2px; background: var(--borda); border-radius: 2px; overflow: hidden; }
+#progresso-barra { height: 100%; width: 0; background: var(--ouro); transition: width .3s; }
+
+.interjeicao {
+  min-height: 1.6em;
+  margin: 1rem 0 0;
+  color: var(--ouro);
+  font-style: italic;
+}
+
+h2 {
+  margin: .25rem 0 1.5rem;
+  font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+h2:focus, h1:focus { outline: none; }
+
+.opcoes { display: grid; gap: .75rem; text-align: left; }
+
+.opcao {
+  width: 100%;
+  padding: .9rem 1.1rem;
+  border: 1px solid var(--borda);
+  border-radius: .6rem;
+  background: var(--fundo-2);
+  color: var(--texto);
+  font: inherit;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+
+.opcao:hover { border-color: var(--ouro-escuro); }
+.opcao:focus-visible { outline: 2px solid var(--ouro); outline-offset: 2px; }
+.opcao.escolhida { border-color: var(--ouro); background: rgba(201, 164, 92, .1); }
+
+.link {
+  margin-top: 1.5rem;
+  padding: .5rem;
+  border: 0;
+  background: none;
+  color: var(--texto-suave);
+  font: inherit;
+  font-size: .9rem;
+  cursor: pointer;
+}
+.link:hover { color: var(--texto); }
+.link:focus-visible { outline: 2px solid var(--ouro); outline-offset: 2px; }
+.link[hidden] { display: none; }
+
+/* ---------- leitura ---------- */
+.pensando { min-height: 1.6em; color: var(--texto-suave); font-style: italic; }
+.pensando:empty { display: none; }
+
+.leitura { text-align: left; }
+
+.frase { margin: 0 0 1rem; }
+.teatral { color: var(--texto-suave); font-style: italic; text-align: center; }
+.final { margin-top: 2rem; color: var(--ouro); font-size: 1.15rem; }
+.destaque { padding-left: 1rem; border-left: 2px solid var(--ouro-escuro); }
+
+.mania {
+  margin: 0 0 1.25rem;
+  padding: 1.1rem 1.1rem .2rem;
+  border: 1px solid var(--borda);
+  border-radius: .6rem;
+  background: var(--fundo-2);
+}
+
+.mania h3 {
+  margin: 0 0 .6rem;
+  color: var(--ouro);
+  font-size: .8rem;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.tag-tecnica {
+  display: none;
+  width: fit-content;
+  margin-top: .3rem;
+  padding: .1rem .55rem;
+  border: 1px solid var(--ouro-escuro);
+  border-radius: 999px;
+  color: var(--ouro);
+  font-size: .72rem;
+  font-style: normal;
+  letter-spacing: .05em;
+}
+
+.revelada .tag-tecnica { display: block; }
+.revelada .teatral .tag-tecnica { margin-inline: auto; }
+
+.surgindo { animation: surgir .6s ease-out both; }
+@keyframes surgir {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 2rem;
+}
+.acoes[hidden] { display: none; }
+
+.botao-secundario { border-color: var(--borda); color: var(--texto-suave); }
+
+.truque {
+  margin-top: 2rem;
+  padding: 1.25rem 1.1rem;
+  border-top: 1px solid var(--ouro-escuro);
+  text-align: left;
+}
+.truque[hidden] { display: none; }
+.truque h3 { margin: 0 0 .5rem; color: var(--ouro); font-weight: 400; }
+.truque dt { margin-top: 1rem; color: var(--ouro); }
+.truque dd { margin: .2rem 0 0; color: var(--texto-suave); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
 @media (min-width: 48rem) {
   .palco { padding-top: 5rem; }
+  .acoes { flex-direction: row; justify-content: center; }
 }
