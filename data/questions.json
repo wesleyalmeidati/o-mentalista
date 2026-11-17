@@ -1,0 +1,164 @@
+{
+  "_nota": "RASCUNHO para revisão (Fase 1). Cada opção soma pontos a traços. 'foco' indica o que a pergunta explora: o que a pessoa faz, quando faz ou o que sente na hora.",
+  "tracos": {
+    "controlador": "O Controlador",
+    "procrastinador": "O Procrastinador Criativo",
+    "observador": "O Observador",
+    "acelerado": "O Acelerado",
+    "sociavel": "O Anfitrião",
+    "cauteloso": "O Cauteloso",
+    "sonhador": "O Sonhador",
+    "pratico": "O Prático"
+  },
+  "areas": {
+    "rotina": "Rotina e corpo",
+    "trabalho": "Trabalho e estudo",
+    "relacoes": "Relações e comunicação",
+    "reacoes": "Emoções e reações",
+    "escolhas": "Consumo e escolhas",
+    "telas": "Telas e tecnologia",
+    "ambiente": "Ambiente"
+  },
+  "perguntas": [
+    {
+      "id": "q01", "area": "rotina", "foco": "o que",
+      "texto": "O despertador tocou. O que você faz nos primeiros cinco minutos?",
+      "opcoes": [
+        { "texto": "Levanto na hora. O dia já tem roteiro.", "tracos": { "controlador": 2, "pratico": 1 } },
+        { "texto": "Soneca. Depois outra. Depois mais uma.", "tracos": { "procrastinador": 2, "sonhador": 1 } },
+        { "texto": "Pego o celular e vejo tudo o que aconteceu enquanto eu dormia.", "tracos": { "acelerado": 2, "sociavel": 1 } },
+        { "texto": "Fico deitado pensando no dia, ou em qualquer outra coisa.", "tracos": { "sonhador": 2, "observador": 1 } }
+      ]
+    },
+    {
+      "id": "q02", "area": "rotina", "foco": "quando",
+      "texto": "Um domingo inteiro sem compromisso. Como ele costuma terminar?",
+      "opcoes": [
+        { "texto": "Com a semana seguinte toda organizada.", "tracos": { "controlador": 2, "cauteloso": 1 } },
+        { "texto": "Cansado: fiz mil coisas e não parei.", "tracos": { "acelerado": 2, "pratico": 1 } },
+        { "texto": "Sem ter feito nada do que planejei. E foi ótimo.", "tracos": { "procrastinador": 2, "sonhador": 1 } },
+        { "texto": "Com gente em volta, de preferência com comida.", "tracos": { "sociavel": 2 } }
+      ]
+    },
+    {
+      "id": "q03", "area": "trabalho", "foco": "quando",
+      "texto": "Uma tarefa importante vence na sexta. Quando você começa de verdade?",
+      "opcoes": [
+        { "texto": "No mesmo dia. Não gosto de pendência me olhando.", "tracos": { "controlador": 2, "cauteloso": 1 } },
+        { "texto": "Quinta à noite, movido a adrenalina.", "tracos": { "procrastinador": 2, "acelerado": 1 } },
+        { "texto": "Começo pela parte divertida e deixo o resto para depois.", "tracos": { "sonhador": 2, "procrastinador": 1 } },
+        { "texto": "Primeiro faço um plano de como vou fazer.", "tracos": { "cauteloso": 2, "pratico": 1 } }
+      ]
+    },
+    {
+      "id": "q04", "area": "trabalho", "foco": "o que",
+      "texto": "Numa reunião ou aula longa, o que você está fazendo lá pela metade?",
+      "opcoes": [
+        { "texto": "Anotando tudo, do meu jeito.", "tracos": { "controlador": 2, "cauteloso": 1 } },
+        { "texto": "Reparando nas pessoas: quem boceja, quem finge que anota.", "tracos": { "observador": 2 } },
+        { "texto": "Perguntando ou comentando alguma coisa.", "tracos": { "sociavel": 2, "acelerado": 1 } },
+        { "texto": "Viajando em outro assunto.", "tracos": { "sonhador": 2 } }
+      ]
+    },
+    {
+      "id": "q05", "area": "relacoes", "foco": "sente",
+      "texto": "Chega um áudio de três minutos. O que você sente na hora?",
+      "opcoes": [
+        { "texto": "Pressa. Vai em velocidade 2x.", "tracos": { "acelerado": 2, "pratico": 1 } },
+        { "texto": "Preguiça. Depois eu ouço (e ouço três dias depois).", "tracos": { "procrastinador": 2 } },
+        { "texto": "Alegria. Já respondo com outro áudio.", "tracos": { "sociavel": 2 } },
+        { "texto": "Irritação: por que não mandou por escrito?", "tracos": { "controlador": 1, "pratico": 2 } }
+      ]
+    },
+    {
+      "id": "q06", "area": "relacoes", "foco": "o que",
+      "texto": "O grupo de amigos está decidindo onde comer. Qual costuma ser o seu papel?",
+      "opcoes": [
+        { "texto": "Decido e mando a localização.", "tracos": { "controlador": 2, "acelerado": 1 } },
+        { "texto": "Sugiro três opções e abro uma votação.", "tracos": { "cauteloso": 1, "sociavel": 2 } },
+        { "texto": "Topo qualquer coisa, contanto que decidam logo.", "tracos": { "pratico": 2 } },
+        { "texto": "Lembro que um não come carne e o outro odeia fila.", "tracos": { "observador": 2, "cauteloso": 1 } }
+      ]
+    },
+    {
+      "id": "q07", "area": "reacoes", "foco": "sente",
+      "texto": "Alguém fura a fila na sua frente. O que você sente na hora?",
+      "opcoes": [
+        { "texto": "Vontade de falar, e falo: educado, mas firme.", "tracos": { "controlador": 2 } },
+        { "texto": "Fico quieto, mas ensaio a resposta perfeita pelo resto do dia.", "tracos": { "sonhador": 2, "cauteloso": 1 } },
+        { "texto": "Curiosidade: olho em volta para ver se mais alguém percebeu.", "tracos": { "observador": 2 } },
+        { "texto": "Preguiça de brigar. Não vale a energia.", "tracos": { "pratico": 2 } }
+      ]
+    },
+    {
+      "id": "q08", "area": "reacoes", "foco": "sente",
+      "texto": "Fazem uma surpresa para você. Qual é a primeira reação?",
+      "opcoes": [
+        { "texto": "Rio e abraço todo mundo.", "tracos": { "sociavel": 2 } },
+        { "texto": "Tento descobrir quem organizou e como eu não percebi.", "tracos": { "observador": 2, "controlador": 1 } },
+        { "texto": "Fico sem saber onde pôr as mãos.", "tracos": { "cauteloso": 2 } },
+        { "texto": "Já penso em como vou retribuir.", "tracos": { "pratico": 1, "controlador": 1, "sonhador": 1 } }
+      ]
+    },
+    {
+      "id": "q09", "area": "escolhas", "foco": "o que",
+      "texto": "Você vai comprar um fone de ouvido novo. Como escolhe?",
+      "opcoes": [
+        { "texto": "Leio avaliações por dias e comparo tudo.", "tracos": { "cauteloso": 2, "controlador": 1 } },
+        { "texto": "Compro o primeiro que achei bonito.", "tracos": { "acelerado": 2, "sonhador": 1 } },
+        { "texto": "Pergunto para quem entende do assunto.", "tracos": { "sociavel": 2, "pratico": 1 } },
+        { "texto": "Já sabia o modelo havia meses, só esperei a hora.", "tracos": { "controlador": 2, "observador": 1 } }
+      ]
+    },
+    {
+      "id": "q10", "area": "escolhas", "foco": "quando",
+      "texto": "O cardápio do restaurante é enorme. Quando você decide?",
+      "opcoes": [
+        { "texto": "Antes de abrir: peço o de sempre.", "tracos": { "cauteloso": 2, "pratico": 1 } },
+        { "texto": "No último segundo, quando o garçom já está do lado.", "tracos": { "procrastinador": 2 } },
+        { "texto": "Depois de ver o que a mesa do lado pediu.", "tracos": { "observador": 2 } },
+        { "texto": "Em dez segundos, e escolho algo que nunca provei.", "tracos": { "acelerado": 1, "sonhador": 2 } }
+      ]
+    },
+    {
+      "id": "q11", "area": "telas", "foco": "o que",
+      "texto": "Quantas abas estão abertas no seu navegador agora?",
+      "opcoes": [
+        { "texto": "Uma ou duas. Fecho o que não uso.", "tracos": { "pratico": 2, "controlador": 1 } },
+        { "texto": "Umas dez, todas importantíssimas.", "tracos": { "acelerado": 2 } },
+        { "texto": "Perdi a conta. Algumas estão lá há meses.", "tracos": { "procrastinador": 2, "sonhador": 1 } },
+        { "texto": "Várias, mas em grupos e favoritos organizados.", "tracos": { "controlador": 2, "cauteloso": 1 } }
+      ]
+    },
+    {
+      "id": "q12", "area": "telas", "foco": "quando",
+      "texto": "É hora de dormir e o celular está na sua mão. O que acontece?",
+      "opcoes": [
+        { "texto": "Só mais um vídeo. E mais um.", "tracos": { "procrastinador": 2 } },
+        { "texto": "Respondo as mensagens que ficaram para trás.", "tracos": { "sociavel": 2 } },
+        { "texto": "Caio num assunto aleatório e leio tudo sobre ele.", "tracos": { "sonhador": 1, "observador": 2 } },
+        { "texto": "Ele já está longe da cama.", "tracos": { "controlador": 2, "pratico": 1 } }
+      ]
+    },
+    {
+      "id": "q13", "area": "ambiente", "foco": "sente",
+      "texto": "O trânsito parou de vez, de carro ou de ônibus. O que você sente?",
+      "opcoes": [
+        { "texto": "Impaciência. Já estou procurando outro caminho.", "tracos": { "acelerado": 2, "pratico": 1 } },
+        { "texto": "Curiosidade pelas pessoas nos outros carros.", "tracos": { "observador": 2 } },
+        { "texto": "Nada demais: aumento a música e canto.", "tracos": { "sonhador": 1, "sociavel": 1, "pratico": 1 } },
+        { "texto": "Alívio por ter saído com folga de horário.", "tracos": { "cauteloso": 2, "controlador": 1 } }
+      ]
+    },
+    {
+      "id": "q14", "area": "ambiente", "foco": "o que",
+      "texto": "Você chega a uma festa cheia. Para onde vai primeiro?",
+      "opcoes": [
+        { "texto": "Para perto de quem eu já conheço.", "tracos": { "cauteloso": 2 } },
+        { "texto": "Para um canto de onde dá para ver todo mundo.", "tracos": { "observador": 2 } },
+        { "texto": "Direto para o meio, cumprimentando geral.", "tracos": { "sociavel": 2 } },
+        { "texto": "Para a mesa de comida. Prioridades.", "tracos": { "pratico": 2 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+/* O Leitor: tema escuro elegante, celular primeiro.
+   Fontes do sistema de propósito: sem Google Fonts = nenhuma requisição a terceiros. */
+
+:root {
+  --fundo: #0e0d0c;
+  --fundo-2: #181614;
+  --texto: #ece6dc;
+  --texto-suave: #a59d90;
+  --ouro: #c9a45c;
+  --ouro-escuro: #8f7440;
+  --borda: #2c2824;
+  --serifa: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: radial-gradient(ellipse at top, var(--fundo-2), var(--fundo) 70%);
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: var(--serifa);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.palco {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.tela { text-align: center; }
+.tela[hidden] { display: none; }
+
+.sobretitulo {
+  margin: 1rem 0 0;
+  color: var(--ouro);
+  font-size: .8rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: .25rem 0 1.25rem;
+  font-size: clamp(2.5rem, 12vw, 4rem);
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+
+.aviso {
+  margin: 0 0 1.5rem;
+  padding: .75rem 1rem;
+  border: 1px solid var(--ouro-escuro);
+  border-radius: .5rem;
+  background: rgba(201, 164, 92, .07);
+  color: var(--texto);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.convite {
+  margin: 0 0 2rem;
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+.botao {
+  min-width: 12rem;
+  padding: .85rem 1.75rem;
+  border: 1px solid var(--ouro);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ouro);
+  font: inherit;
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.botao:hover:not(:disabled) {
+  background: var(--ouro);
+  color: var(--fundo);
+}
+
+.botao:focus-visible {
+  outline: 2px solid var(--ouro);
+  outline-offset: 3px;
+}
+
+.botao:disabled { opacity: .55; cursor: default; }
+
+.rodape {
+  margin-top: 2.5rem;
+  color: var(--texto-suave);
+  font-size: .8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+@media (min-width: 48rem) {
+  .palco { padding-top: 5rem; }
+}

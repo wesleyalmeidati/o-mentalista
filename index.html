@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Um jogo de entretenimento: responda 14 perguntas e deixe o Leitor adivinhar suas manias.">
+  <title>O Leitor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="palco">
+
+    <!-- Tela 1: Início -->
+    <section id="tela-inicio" class="tela" aria-labelledby="titulo-inicio">
+      <p class="sobretitulo">Um jogo de leitura fria</p>
+      <h1 id="titulo-inicio">O Leitor</h1>
+      <p class="aviso" role="note">
+        Isto é um jogo de entretenimento inspirado em mentalismo de ficção.
+        Não é avaliação psicológica, diagnóstico nem conselho.
+      </p>
+      <p class="convite">
+        Responda 14 perguntas rápidas sobre o seu dia a dia.
+        Eu vou adivinhar três manias suas. Talvez eu acerte. Talvez seja só um truque.
+      </p>
+      <button id="btn-comecar" class="botao" type="button" disabled>Em construção</button>
+      <p class="rodape">Nada do que você responde sai deste navegador.</p>
+    </section>
+
+    <!-- Tela 2: Questionário (Fase 3) -->
+    <section id="tela-perguntas" class="tela" hidden></section>
+
+    <!-- Tela 3: Leitura (Fase 3) -->
+    <section id="tela-leitura" class="tela" hidden></section>
+
+  </main>
+  <script src="js/engine.js"></script>
+  <script src="js/reading.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
