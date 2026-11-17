@@ -46,7 +46,7 @@
 
   "pistas": [
     "Você respondeu: “{resposta}” Parece um detalhe. Não é.",
-    "Lembra quando escolheu “{resposta}”? Eu reparei.",
+    "Lembra desta resposta? “{resposta}” Eu reparei.",
     "“{resposta}” Foi aí que eu entendi."
   ],
 
@@ -148,7 +148,7 @@
 
   "universais": [
     { "texto": "Você consegue ser ótima companhia, mas há dias em que tudo o que quer é silêncio.", "tecnica": "arco_iris" },
-    { "texto": "Por fora você parece em paz, mas por dentro a cabeça raramente desliga.", "tecnica": "arco_iris" },
+    { "texto": "Por fora você parece em outro mundo, mas está sempre reparando em tudo.", "tecnica": "arco_iris" },
     { "texto": "Você tem um senso de humor que nem todo mundo entende de primeira.", "tecnica": "elogio" },
     { "texto": "Você cobra mais de si do que dos outros.", "tecnica": "forer" },
     { "texto": "Tem uma ideia sua guardada que você ainda não contou para quase ninguém.", "tecnica": "forer" },
