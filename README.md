@@ -1,17 +1,17 @@
-# O Leitor
+# The Mentalist
 
-Um jogo de entretenimento que faz uma "leitura" divertida das suas manias, no estilo de um mentalista de ficção. Você responde 14 perguntas de múltipla escolha e o Leitor, um narrador original, faz três palpites confiantes e teatrais sobre você. No fim, ele revela como o truque funciona.
+Um jogo de entretenimento que faz uma "leitura" divertida das suas manias, no estilo de um mentalista de ficção. Você responde 14 perguntas de múltipla escolha e o mentalista, um narrador original, faz três palpites confiantes e teatrais sobre você. No fim, ele revela como o truque funciona.
 
 > **Aviso:** isto é um jogo de entretenimento inspirado em mentalismo de ficção. Não é avaliação psicológica, diagnóstico nem conselho.
 
 ## Princípios
 
-- **É um jogo.** Os "porquês" são palpites do Leitor, nunca conclusões.
+- **É um jogo.** Os "porquês" são palpites do mentalista, nunca conclusões.
 - **Sem temas sensíveis.** Nada sobre saúde, traumas, relacionamentos íntimos, sexualidade, religião, política ou finanças pessoais.
 - **Só múltipla escolha.** Não há campo de texto livre.
 - **Zero coleta de dados.** Tudo roda no navegador: sem backend, banco, analytics, cookies ou fontes de terceiros. As respostas somem ao fechar a página.
 - **O truque é revelado.** A leitura usa leitura fria e o efeito Forer, e o próprio jogo explica isso.
-- **Projeto original.** É inspirado no gênero, sem imagens, logos, trilha, falas ou personagens de séries.
+- **Inspirado, não copiado.** O nome homenageia a série *The Mentalist*, mas o projeto não usa imagens, logos, trilha, falas ou personagens dela. É um projeto de fã, sem fins comerciais e sem vínculo com os detentores dos direitos.
 
 ## Como rodar
 
