@@ -245,3 +245,25 @@ h1:focus, h2:focus, h3:focus { outline: none; }
   .palco { padding-top: 5rem; }
   .acoes { flex-direction: row; justify-content: center; }
 }
+
+/* ---------- privacidade (LGPD) ---------- */
+.rodape-site {
+  padding: 0 1.25rem 2rem;
+  text-align: center;
+  font-size: .8rem;
+}
+.rodape-site a,
+.politica a { color: var(--texto-suave); }
+.rodape-site a:hover,
+.politica a:hover { color: var(--texto); }
+.rodape-site a:focus-visible,
+.politica a:focus-visible { outline: 2px solid var(--ouro); outline-offset: 2px; }
+
+.politica { text-align: left; line-height: 1.6; }
+.politica h1 { text-align: left; font-size: clamp(2rem, 9vw, 3rem); }
+.politica h2 { margin: 2rem 0 .5rem; font-size: 1.15rem; color: var(--ouro); text-align: left; }
+.politica ul { padding-left: 1.2rem; }
+.politica li { margin-bottom: .4rem; }
+.politica code { font-size: .9em; color: var(--texto-suave); }
+.politica .atualizada { color: var(--texto-suave); font-size: .9rem; }
+.politica .voltar { display: inline-block; margin-top: 2rem; }

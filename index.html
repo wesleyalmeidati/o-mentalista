@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'">
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="Um jogo de entretenimento: responda 14 perguntas e deixe o mentalista adivinhar suas manias.">
   <title>The Mentalist</title>
   <link rel="stylesheet" href="css/style.css">
@@ -25,7 +27,7 @@
       </p>
       <button id="btn-comecar" class="botao" type="button" disabled>Carregando…</button>
       <p id="erro-carga" class="erro" role="alert" hidden></p>
-      <p class="rodape">Nada do que você responde sai deste navegador.</p>
+      <p class="rodape">Nada do que você responde sai deste navegador. Sem cookies, sem cadastro, sem rastreamento.</p>
     </section>
 
     <!-- Tela 2: Questionário -->
@@ -67,6 +69,9 @@
     </section>
 
   </main>
+  <footer class="rodape-site">
+    <a href="privacidade.html">Privacidade (LGPD)</a>
+  </footer>
   <script src="js/engine.js"></script>
   <script src="js/reading.js"></script>
   <script src="js/app.js"></script>

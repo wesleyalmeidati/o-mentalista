@@ -30,6 +30,7 @@ Em produção, o site fica no GitHub Pages: https://wesleyalmeidati.github.io/o-
 
 ```
 index.html          telas do jogo
+privacidade.html    política de privacidade (LGPD)
 css/style.css       tema escuro, celular primeiro
 js/app.js           navegação entre telas
 js/engine.js        motor de regras (respostas → pontos por traço)
@@ -37,7 +38,20 @@ js/reading.js       monta a leitura a partir dos traços
 data/questions.json 14 perguntas em 7 áreas
 data/phrases.json   banco de frases por traço
 docs/estudo.md      anotações de estudo
+tests/              testes do motor e guarda da LGPD
 ```
+
+Testes: `node tests/motor.test.js` e `node tests/privacidade.test.js`.
+
+## Privacidade (LGPD)
+
+O jogo foi feito para não tratar dados pessoais, em linha com a LGPD (Lei 13.709/2018). A [política de privacidade](privacidade.html) explica isso para quem joga. As garantias técnicas:
+
+- **Nada sai do navegador:** sem cookies, `localStorage`, analytics, formulários ou recursos de terceiros.
+- **Política de segurança (CSP)** nas duas páginas: o navegador só carrega e só se conecta ao próprio site.
+- **`no-referrer`:** links externos não recebem o endereço de origem.
+- **Guarda automática:** `tests/privacidade.test.js` falha se alguém acrescentar armazenamento, envio de dados, script externo ou formulário. Se um dia o jogo precisar tratar dados, a política tem que ser revista antes.
+- **Hospedagem:** o GitHub Pages registra o IP dos acessos por conta própria; a política informa isso e aponta para a declaração de privacidade do GitHub.
 
 ## Licença
 
