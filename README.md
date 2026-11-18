@@ -2,6 +2,8 @@
 
 Um jogo de entretenimento que faz uma "leitura" divertida das suas manias, no estilo de um mentalista de ficção. Você responde 14 perguntas de múltipla escolha e o mentalista, um narrador original, faz três palpites confiantes e teatrais sobre você. No fim, ele revela como o truque funciona.
 
+**Jogar:** https://wesleyalmeidati.github.io/o-mentalista/
+
 > **Aviso:** isto é um jogo de entretenimento inspirado em mentalismo de ficção. Não é avaliação psicológica, diagnóstico nem conselho.
 
 ## Princípios
@@ -22,7 +24,7 @@ python -m http.server 8000
 # abra http://localhost:8000
 ```
 
-Em produção, o site fica no GitHub Pages.
+Em produção, o site fica no GitHub Pages: https://wesleyalmeidati.github.io/o-mentalista/
 
 ## Estrutura
 
